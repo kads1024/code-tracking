@@ -1,6 +1,7 @@
+"use client"
 import { Canvas } from '@react-three/fiber'
 import clsx from 'clsx'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 const RenderModel = ({children, className}) => {
 
@@ -8,7 +9,7 @@ const RenderModel = ({children, className}) => {
 
   return (
     <Canvas
-      className={clsx("w-screen h-screen relative", className)}
+      className={clsx("w-screen h-screen -z-10 relative", className)}
       >
         <Suspense fallback={null}>
             {children}
