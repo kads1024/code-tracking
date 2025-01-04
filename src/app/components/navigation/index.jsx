@@ -2,6 +2,7 @@
 import { BtnList } from '@/app/data'
 
 import React from 'react'
+import NavButton from './NavButton';
 
 const Navigation = () => {
 
@@ -18,6 +19,8 @@ const Navigation = () => {
                         const radius = 'calc(20vw - 1rem)' // Calculate screen radius
                         const x = `calc(${radius} * ${Math.cos(angleRad)})` // Calculate x position based on angle
                         const y = `calc(${radius} * ${Math.sin(angleRad)})` // Calculate y position based on angle
+
+                        return <NavButton x={x} y={y} />
 
                         return <button
                             key={index}
