@@ -11,7 +11,7 @@ const Navigation = () => {
 
     return (
         <div className='w-full fixed h-screen flex items-center justify-center'>
-            <div className='w-max flex items-center justify-between relative'>
+            <div className='w-max flex items-center justify-between relative animate-spin-slow'>
                 {
                     BtnList.map((btn, index) => {
 
