@@ -20,18 +20,7 @@ const Navigation = () => {
                         const x = `calc(${radius} * ${Math.cos(angleRad)})` // Calculate x position based on angle
                         const y = `calc(${radius} * ${Math.sin(angleRad)})` // Calculate y position based on angle
 
-                        return <NavButton x={x} y={y} />
-
-                        return <button
-                            key={index}
-                            className='absolute'
-                            style={
-                                {
-                                    transform: `translate(${x}, ${y})` // Set Button position
-                                }
-                            }>
-                            {btn.label}
-                        </button>
+                        return <NavButton key={btn.label} x={x} y={y} {...btn} /> 
                     })
                 }
             </div>
