@@ -1,8 +1,8 @@
 import Image from "next/image";
 import bg from "../../../../public/background/about-background.png"
 import RenderModel from "../../components/RenderModel";
-import Staff from "../../components/models/Staff";
 import HatModel from "@/app/components/models/HatModel";
+import AboutDetails from "@/app/components/about";
 
 
 export default function Home() {
@@ -17,12 +17,12 @@ export default function Home() {
             </div>
 
             <div className="relative w-full h-screen flex flex-col items-center justify-center">
-                <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-x-1/2">
-                    <h1 className="font-bold text-9x1 text-accent">Kenneth Amiel Santos</h1>
-                    <p>Meet the wizard behind this portfolio</p>
+                <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2">
+                    <h1 className="font-bold text-9xl text-accent">Kenneth</h1>
+                    <p className="font-light text-foreground text-ls">Meet the wizard behind this portfolio</p>
                 </div>
             </div>
-
+        <AboutDetails />
         </>
     );
 }
