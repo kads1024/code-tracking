@@ -56,10 +56,18 @@ const AboutDetails = () => {
                 </ItemLayout>  
 
                 <ItemLayout className={'col-span-6 !p-0'}>
-                    <img src="https://github-readme-streak-stats.herokuapp.com?user=kads1024&theme=dark&hide_border=true&type=png&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="GitHub Streak" />
+                    <img src="https://github-readme-streak-stats.herokuapp.com?user=kads1024&theme=dark&hide_border=true&type=png&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="kads1024"
+                    loading='lazy' />
                 </ItemLayout>  
 
-               
+
+                <ItemLayout className={'col-span-6 !p-0'}>
+                    <img
+                    className='w-full h-auto'
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=kads1024&repo=portfolio-wizard&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2"
+                    alt="kads1024"
+                    loading='lazy' />
+                </ItemLayout>  
             </div>
         </section>
     )
