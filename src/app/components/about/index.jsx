@@ -30,6 +30,36 @@ const AboutDetails = () => {
                         7+ <sub className='font-semibold text-base'>years of experience</sub>
                     </p>
                 </ItemLayout>
+
+                <ItemLayout className={'col-span-4 !p-0'}>
+                    <img
+                    className='w-full h-auto'
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=kads1024&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+                    alt="kads1024"
+                    loading='lazy' />
+                </ItemLayout>
+
+                <ItemLayout className={'col-span-8 !p-0'}>
+                    <img
+                    className='w-full h-auto'
+                    src="https://github-readme-stats.vercel.app/api?username=kads1024&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+                    alt="kads1024"
+                    loading='lazy' />
+                </ItemLayout>  
+
+                <ItemLayout className={'col-span-full'}>
+                    <img
+                    className='w-full h-auto'
+                    src="https://skillicons.dev/icons?i=unity,unreal,c,cpp,cs,visualstudio,rider,cmake,discord,figma,git,github,gitlab,gmail,js,mysql,notion,mongodb"
+                    alt="kads1024"
+                    loading='lazy' />
+                </ItemLayout>  
+
+                <ItemLayout className={'col-span-6 !p-0'}>
+                    <img src="https://github-readme-streak-stats.herokuapp.com?user=kads1024&theme=dark&hide_border=true&type=png&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B" alt="GitHub Streak" />
+                </ItemLayout>  
+
+               
             </div>
         </section>
     )
