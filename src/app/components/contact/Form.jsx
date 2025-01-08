@@ -9,15 +9,15 @@ export default function Form() {
     const sendEmail = (params) => {
         emailjs
             .send(
-                process.env.NEXT_PUBLIC_SERVICE_ID, 
-                process.env.NEXT_PUBLIC_TEMPLATE_ID, 
+                process.env.NEXT_PUBLIC_SERVICE_ID,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID,
                 params,
                 {
-                publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-                limitRate: {
-                    throttle: 5000, // you cannot send more than 1 email per 5 seconds
-                }
-            })
+                    publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+                    limitRate: {
+                        throttle: 5000, // you cannot send more than 1 email per 5 seconds
+                    }
+                })
             .then(
                 () => {
                     console.log('SUCCESS!');
@@ -36,7 +36,7 @@ export default function Form() {
             reply_to: data.Email,
             message: data.Message,
         }
-        sendEmail(templateParams)  
+        sendEmail(templateParams)
     };
     console.log(errors);
 
