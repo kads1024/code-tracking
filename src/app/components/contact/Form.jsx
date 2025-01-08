@@ -1,16 +1,22 @@
 "use client"
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from "@emailjs/browser"
 
 export default function Form() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
+    const sendEmail = (params) => {
         emailjs
-            .send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+            .send(
+                process.env.NEXT_PUBLIC_SERVICE_ID, 
+                process.env.NEXT_PUBLIC_TEMPLATE_ID, 
+                params,
+                {
                 publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+                limitRate: {
+                    throttle: 5000, // you cannot send more than 1 email per 5 seconds
+                }
             })
             .then(
                 () => {
@@ -22,7 +28,16 @@ export default function Form() {
             );
     };
 
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+
+        const templateParams = {
+            to_name: "Kenneth",
+            from_name: data.Name,
+            reply_to: data.Email,
+            message: data.Message,
+        }
+        sendEmail(templateParams)  
+    };
     console.log(errors);
 
     return (
