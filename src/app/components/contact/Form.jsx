@@ -1,12 +1,16 @@
 "use client"
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from "@emailjs/browser"
+import emailjs from "@emailjs/browser";
+import {Toaster, toast } from 'sonner';
 
 export default function Form() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    
+
     const sendEmail = (params) => {
+        const toastId = toast.loading("Sending your message, please wait...");
         emailjs
             .send(
                 process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -41,7 +45,11 @@ export default function Form() {
     console.log(errors);
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}
+
+
+        <>
+        <Toaster richColors={true} />
+         <form onSubmit={handleSubmit(onSubmit)}
             className='max-w-md w-full flex flex-col items-center justify-center space-y-4'
         >
             <input type="text" placeholder="Name" {...register("Name", { required: 'This field is required!',
@@ -80,5 +88,7 @@ export default function Form() {
                 value="Cast your Message!"
                 className='px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize' type="submit" />
         </form>
+        </>
+       
     );
 }
