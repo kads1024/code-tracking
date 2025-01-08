@@ -44,16 +44,37 @@ export default function Form() {
         <form onSubmit={handleSubmit(onSubmit)}
             className='max-w-md w-full flex flex-col items-center justify-center space-y-4'
         >
-            <input type="text" placeholder="Name" {...register("Name", {})}
+            <input type="text" placeholder="Name" {...register("Name", { required: 'This field is required!',
+                minLength: {
+                    value: 3,
+                    message: "Name should be at least 3 characters long."
+                }
+            })}
                 className='w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg'
             />
-            <input type="email" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+            {
+                errors.Name && <span className='inline-block self-start text-accent'>{errors.Name.message}</span>
+            }
+
+            <input type="email" placeholder="Email" {...register("Email", { required: 'This field is required!', pattern: /^\S+@\S+$/i })}
                 className='w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg'
             />
-            <textarea placeholder='Message'
-                {...register("Message", { required: true, max: 256, min: 50 })}
+            {
+                errors.Email && <span className='inline-block self-start text-accent'>{errors.Email.message}</span>
+            }
+            <textarea placeholder='Message' 
+                {...register("Message", { required: 'This field is required!', maxLength: {
+                    value: 500,
+                    message: "Message should be less than 500 characters"
+                }, minLength: {
+                    value: 50,
+                    message: "Message should be at least 50 characters"
+                } })}
                 className='w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg'
             />
+            {
+                errors.Message && <span className='inline-block self-start text-accent'>{errors.Message.message}</span>
+            }
 
             <input
                 value="Cast your Message!"
