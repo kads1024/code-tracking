@@ -31,37 +31,38 @@ export default function Form() {
   const sendEmail = (params) => {
     const toastId = toast.loading("Sending your message, please wait...");
 
-    // emailjs
-    //   .send(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     params,
-    //     {
-    //       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-    //       limitRate: {
-    //         throttle: 5000, // you can not send more then 1 email per 5 seconds
-    //       },
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       toast.success(
-    //         "I have received your message, I will get back to you soon!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     },
-    //     (error) => {
-    //       // console.log("FAILED...", error.text);
-    //       toast.error(
-    //         "There was an error sending your message, please try again later!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     }
-    //   );
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        params,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+          limitRate: {
+            throttle: 5000, // you can not send more then 1 email per 5 seconds
+          },
+        }
+      )
+      .then(
+        () => {
+          toast.success(
+            "I have received your message, I will get back to you soon!",
+            {
+              id: toastId,
+            }
+          );
+        },
+        (error) => {
+          // console.log("FAILED...", error.text);
+          toast.error(
+            "There was an error sending your message, please try again later!",
+            {
+              id: toastId,
+            }
+          );
+        }
+      );
   };
 
   const onSubmit = (data) => {
