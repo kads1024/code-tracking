@@ -53,7 +53,6 @@ export default function Form() {
           );
         },
         (error) => {
-          // console.log("FAILED...", error.text);
           toast.error(
             "There was an error sending your message, please try again later!",
             {
