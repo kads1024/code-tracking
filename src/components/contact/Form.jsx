@@ -31,7 +31,6 @@ export default function Form() {
   const sendEmail = (params) => {
     const toastId = toast.loading("Sending your message, please wait...");
 
-
     emailjs
       .send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
