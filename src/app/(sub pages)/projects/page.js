@@ -3,7 +3,6 @@ import bg from "../../../../public/background/projects-background.png";
 import ProjectList from "@/components/projects";
 import { projectsData } from "../../data";
 import RenderModel from "@/components/RenderModel";
-// import Staff from "@/components/models/Staff";
 import dynamic from "next/dynamic";
 
 const Staff = dynamic(() => import("@/components/models/Staff"), {
@@ -19,7 +18,7 @@ export default function Home() {
     <>
       <Image
         src={bg}
-        alt="Next.js Portfolio website's about page background image"
+        alt="Portfolio website's about page background image"
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
         priority
         sizes="100vw"
