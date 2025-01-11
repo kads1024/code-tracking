@@ -31,8 +31,6 @@ export default function Form() {
   const sendEmail = (params) => {
     const toastId = toast.loading("Sending your message, please wait...");
 
-    // comment out the above toast.info and uncomment the below code to enable emailjs
-
     // emailjs
     //   .send(
     //     process.env.NEXT_PUBLIC_SERVICE_ID,
