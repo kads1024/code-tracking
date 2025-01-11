@@ -12,18 +12,18 @@ const AboutDetails = () => {
           }
         >
           <h2 className="  text-xl md:text-2xl text-left w-full capitalize">
-            Architect of Enchantment
+            Sorcerer of Interactive Realms
           </h2>
           <p className="font-light  text-xs sm:text-sm md:text-base   ">
-            My journey in web development is powered by an array of mystical
-            tools and languages, with JavaScript casting the core of my
-            enchantments. I wield frameworks like React.js and Next.js with
-            precision, crafting seamless portals (websites) that connect realms
-            (users) across the digital universe. The ancient arts of the
-            Jamstack empower me to create fast, secure, and dynamic experiences,
-            while my design skills ensure every creation is not only functional
-            but visually captivating. Join me as I continue to explore new
-            spells and technologies to shape the future of the web.
+          My journey in game development is fueled by arcane knowledge and 
+          powerful tools, with C++ and C# as the enchanted runes that forge 
+          immersive worlds. I wield the mighty engines of Unity and Unreal 
+          with masterful precision, conjuring realms that captivate players 
+          and breathe life into imagination. Through the alchemy of code and 
+          design, I craft experiences where every interaction feels alive and 
+          every challenge beckons heroes to rise. Join me as I continue to 
+          uncover ancient techniques and weave new spells to shape the future 
+          of gaming.
           </p>
         </ItemLayout>
 
@@ -39,7 +39,7 @@ const AboutDetails = () => {
           className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            4+{" "}
+            6+{" "}
             <sub className="font-semibold text-base">years of experience</sub>
           </p>
         </ItemLayout>
@@ -49,8 +49,8 @@ const AboutDetails = () => {
         >
           <img
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
+            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=kads1024&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
+            alt="Kenneth's Github Stats"
             loading="lazy"
           />
         </ItemLayout>
