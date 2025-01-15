@@ -31,7 +31,7 @@ const AboutDetails = () => {
           className={" col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            25+ <sub className="font-semibold text-base">clients</sub>
+            10+ <sub className="font-semibold text-base">clients</sub>
           </p>
         </ItemLayout>
 
@@ -44,7 +44,7 @@ const AboutDetails = () => {
           </p>
         </ItemLayout>
 
-        <ItemLayout
+        {/* <ItemLayout
           className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
         >
           <img
@@ -62,7 +62,7 @@ const AboutDetails = () => {
             alt="Kenneth's Github Stats"
             loading="lazy"
           />
-        </ItemLayout>
+        </ItemLayout> */}
 
         <ItemLayout className={"col-span-full"}>
           <img
@@ -73,7 +73,7 @@ const AboutDetails = () => {
           />
         </ItemLayout>
 
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+        {/* <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <img
             className="w-full h-auto"
             src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=kads1024&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
@@ -95,7 +95,7 @@ const AboutDetails = () => {
               loading="lazy"
             />
           </Link>
-        </ItemLayout>
+        </ItemLayout> */}
       </div>
     </section>
   );

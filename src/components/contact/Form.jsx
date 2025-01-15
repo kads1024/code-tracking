@@ -26,6 +26,7 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const sendEmail = (params) => {
@@ -51,6 +52,7 @@ export default function Form() {
               id: toastId,
             }
           );
+          reset();
         },
         (error) => {
           toast.error(

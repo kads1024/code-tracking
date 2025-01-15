@@ -20,15 +20,15 @@ export default function Contact() {
       <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 space-y-8">
         <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
           <h1 className="text-accent font-semibold text-center text-4xl capitalize">
-            Summon the Wizard
+            Invoke the Sorcerer's Presence
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
-            Step into the circle of enchantment and weave your words into the
-            fabric of the cosmos. Whether you seek to conjure collaborations,
-            unlock mysteries, or simply share tales of adventure, your messages
-            are treasured scrolls within this realm. Use the form below to send
-            your missives through the ethereal network, and await the whisper of
-            magic in response.
+          Step forth, seeker of arcane wisdom and mystical craft, and send 
+          forth your missives into the aether. Whether you wish to forge 
+          alliances, unlock secrets, or share tales of your own magical 
+          pursuits, your words shall be etched into the spellbook of 
+          this realm. Use the form below to dispatch your inquiry, and 
+          prepare for the enchantment that follows.
           </p>
         </div>
         <Form />
