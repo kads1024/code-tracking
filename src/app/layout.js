@@ -3,6 +3,7 @@ import "./globals.css";
 import clsx from "clsx";
 import FireFliesBackground from "@/components/FirefliesBackground";
 import Sound from "@/components/Sound";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <FireFliesBackground />
         <Sound />
         <div id="my-modal" />
+        <SpeedInsights />
       </body>
     </html>
   );
