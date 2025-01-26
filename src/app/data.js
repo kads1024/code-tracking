@@ -90,7 +90,6 @@ export const projectsData = [
 ];
 
 export const BtnList = [
-  { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },
   { label: "Contact", link: "/contact", icon: "contact", newTab: false },
@@ -104,12 +103,6 @@ export const BtnList = [
     label: "LinkedIn",
     link: "https://www.linkedin.com/in/ken-santos",
     icon: "linkedin",
-    newTab: true,
-  },
-  {
-    label: "X",
-    link: "https://www.x.com/kennykenken37",
-    icon: "twitter",
     newTab: true,
   },
   {
